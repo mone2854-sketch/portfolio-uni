@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Education</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fafafa;
+      color: #333;
+      padding: 40px 20px;
+    }
+
+    .edu-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      animation: fadeIn 1s ease;
+    }
+
+    /* 左边学历 */
+    .edu-left { flex: 1; }
+    .edu-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #222;
+    }
+    .edu-item { margin-bottom: 30px; }
+    .edu-item h3 { margin: 0 0 8px; font-size: 1.3rem; color: #111; }
+    .edu-item span { display: block; font-size: 0.95rem; color: #666; margin-bottom: 8px; }
+    .edu-item p { margin: 0; font-size: 1rem; line-height: 1.5; }
+
+    /* 右边成绩单 */
+    .edu-right { flex: 1; text-align: center; }
+    .edu-right h3 { margin-bottom: 15px; font-size: 1.2rem; color: #222; }
+    .edu-right img {
+      max-width: 100%;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: zoom-in;
+      transition: transform 0.25s ease;
+    }
+    .edu-right img:hover {
+      transform: scale(1.03);
+    }
+
+    /* 按钮 */
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: #ff9800;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn:hover { background: #e68900; transform: scale(1.05); }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      .edu-wrapper { flex-direction: column; align-items: center; }
+      .edu-right img { max-width: 85%; }
+    }
+
+    /* 🔎 Lightbox 样式 */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      cursor: zoom-out;
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="edu-wrapper">
+    <!-- 左边学历 -->
+    <div class="edu-left">
+      <h2>Education</h2>
+
+      <div class="edu-item">
+        <h3>University of Reading Malaysia</h3>
+        <span>2024 – Present | International Foundation Programme</span>
+        <p>
+          Currently undertaking the International Foundation Programme, focusing on:
+          <br>📘 Law
+          <br>📐 Mathematics
+          <br>✍️ English
+        </p>
+      </div>
+
+      <div class="edu-item">
+        <h3>High School</h3>
+        <span>– 2024 | Completed Secondary Education</span>
+        <p>
+          Completed secondary studies with emphasis on analytical thinking and problem solving,
+          preparing for higher education in Creative Media.
+        </p>
+      </div>
+
+      <a href="portfolio.html" class="btn">Next: My Portfolio →</a>
+    </div>
+
+    <!-- 右边成绩单 -->
+    <div class="edu-right">
+      <h3>📄 My SPM Result</h3>
+      <img src="spm.jpg" alt="SPM Result" onclick="openLightbox()">
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img src="spm.jpg" alt="SPM Result">
+  </div>
+
+  <script>
+    function openLightbox() {
+      document.getElementById("lightbox").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+</body>
+</html>

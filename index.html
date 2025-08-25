@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fff, #f5f5f5);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .hero {
+      max-width: 800px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .hero h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    /* 按钮样式 */
+    .hero .btn {
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: #ff9800;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .hero .btn:hover {
+      background: #e68900;
+      transform: scale(1.05);
+    }
+
+    /* Floating background circles */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 165, 0, 0.15);
+      animation: float 6s infinite ease-in-out alternate;
+    }
+
+    .circle.small {
+      width: 60px;
+      height: 60px;
+      bottom: 10%;
+      left: 15%;
+    }
+
+    .circle.large {
+      width: 120px;
+      height: 120px;
+      top: 10%;
+      right: 20%;
+      animation-duration: 8s;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-20px); }
+    }
+
+    /* === 📱 手机端优化 === */
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero h2 {
+        font-size: 1.2rem;
+      }
+
+      .hero p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+
+      .hero .btn {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+      }
+
+      .circle.small {
+        width: 40px;
+        height: 40px;
+        left: 10%;
+      }
+
+      .circle.large {
+        width: 80px;
+        height: 80px;
+        right: 10%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .hero .btn {
+        width: 100%;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Lau Hong Cher</h1>
+    <p>
+      With a strong technical background in full-stack development and AI-assisted tools, <br>
+      I aspire to further enhance my creativity and design skills through Creative Media.
+    </p>
+
+    <!-- 跳转按钮 -->
+    <a href="about.html" class="btn">View My Portfolio</a>
+
+    <!-- Animated decoration -->
+    <div class="circle small"></div>
+    <div class="circle large"></div>
+  </section>
+</body>
+</html>

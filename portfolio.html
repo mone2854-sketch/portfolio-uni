@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fafafa;
+      color: #333;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: #222;
+    }
+
+    .projects {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .project {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .project:hover { transform: translateY(-5px); }
+
+    .project img {
+      width: 45%;
+      height: auto;
+      object-fit: cover;
+      border-right: 1px solid #eee;
+    }
+
+    .project-text {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .project-text h3 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #111;
+    }
+    .project-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 10px 0 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 22px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fff;
+      background: #ff9800;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn:hover { background: #e68900; }
+
+    @media(max-width: 900px) {
+      .project { flex-direction: column; }
+      .project img { width: 100%; border-right: none; border-bottom: 1px solid #eee; }
+    }
+  </style>
+</head>
+<body>
+  <h2>Portfolio</h2>
+
+  <div class="projects">
+    <!-- Project 1 -->
+    <div class="project">
+      <img src="yummydiary_preview.png" alt="Yummy Diary Project">
+      <div class="project-text">
+        <h3>🍪 Yummy Diary — Full-Stack E-Commerce Website</h3>
+        <p>
+          A <b>fully functional full-stack e-commerce website</b> developed for a real business client.  
+          Includes <b>frontend design</b> (responsive layout, animations, live search suggestions) and a robust 
+          <b>backend system</b> powered by <b>PHP + MySQL</b>.  
+          Features cover product browsing, live stock updates, shopping cart with session handling, 
+          order receipt with PDF/Poster export, and an admin panel for product & order management.  
+          Hosted and deployed on <b>Hostinger (LAMP stack)</b>.
+        </p>
+        <a href="https://yummydiary.store/" target="_blank" class="btn">🔗 View Live</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+      <img src="game_preview.png" alt="2D Platformer Game">
+      <div class="project-text">
+        <h3>🎮 2D Platformer Game Prototype</h3>
+        <p>
+          A 2D platformer prototype developed in <b>Godot Engine</b>, featuring character movement, 
+          ladders, checkpoints, and interactive objects.  
+          <br><br>
+          All <b>game logic and programming</b> were independently implemented by me, while 
+          <b>art assets are credited to Kenny (kenney.nl)</b>, a popular resource for game developers.  
+          This project highlights my skills in <b>game development, pixel art integration, and level design</b>.
+        </p>
+        <a href="https://drive.google.com/file/d/13DR7w37NIwvl9IL7EuBokjCg9sDVzqxN/view?usp=drive_link" target="_blank" class="btn">🎥 Gameplay Demo</a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <img src="comingsoon.jpg" alt="Virtual Law World Project Preview">
+      <div class="project-text">
+        <h3>⚖️ Project 3 — Virtual Law World</h3>
+        <p>
+          A planned interactive <b>virtual world project</b> that merges <b>legal education</b> with <b>creative media</b>.  
+          The concept is to design a <b>gamified environment</b> where users can explore simplified courtrooms,  
+          trial simulations, and case-based storytelling to learn fundamental principles of law.  
+          <br><br>
+          This idea is inspired by my foundation studies in <b>Law</b>,  
+          and aims to present legal knowledge through <b>immersive design and interactive media</b>.  
+          <br><br>
+          Although still in the design stage, this project reflects my aspiration to bridge  
+          <b>technical development, storytelling, and legal knowledge</b> — perfectly aligning with my goal in Creative Media.
+        </p>
+        <a href="#" class="btn">✨ Stay Tuned</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:40px;">
+    <a href="contact.html" class="btn">Next: Contact →</a>
+  </div>
+</body>
+</html>
